@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from controllers.configController import showSettings  # Updated import
+from controllers.messageController import showMessages  # Added import
 
 def showWelcomeMessage(frame):
     # Limpa o frame principal
@@ -17,7 +18,7 @@ def showMainMenu(menuFrame, mainFrame, config):
     contatosButton = ctk.CTkButton(menuFrame, text="Contatos", command=lambda: print("Contatos"))
     contatosButton.pack(pady=10, padx=10)
 
-    mensagensButton = ctk.CTkButton(menuFrame, text="Mensagens", command=lambda: print("Mensagens"))
+    mensagensButton = ctk.CTkButton(menuFrame, text="Mensagens", command=lambda: showMessages(mainFrame))
     mensagensButton.pack(pady=10, padx=10)
 
     imagensButton = ctk.CTkButton(menuFrame, text="Imagens", command=lambda: print("Imagens"))
